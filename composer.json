@@ -1,6 +1,7 @@
 {
 	"name" : "jdchmiel/lessREST",
 	"description" : "A very simple partial REST framework",
+	"version" : "0.1.0",
 	"author": {
 		"name" : "Jared Chmielecki",
 		"email" : "jdchmiel@gmail.com"
