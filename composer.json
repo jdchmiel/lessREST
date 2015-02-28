@@ -11,12 +11,12 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"jdchmiel\\rest\\" : "model/"
+			"jdchmiel\\lessREST\\" : "model/"
 		}
 	},
 	"autoload-dev" : {
 		"psr-4" : {
-			"jdchmiel\\rest\\tests" : "tests/"
+			"jdchmiel\\lessREST\\tests\\" : "tests/"
 		}
 	}
 }

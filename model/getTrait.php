@@ -4,9 +4,14 @@ namespace jdchmiel\lessREST;
  * base class for the specific individual rest handlers 
  **/
 
-abstract class base {
+trait getTrait {
+	protected $params;
+	protected $payload;
 	abstract public function process(); // depending on writing or reading, will call save or load
-	abstract public function __construct($params); //TODO can i do this to force params?
+	public function __construct($params, $payload) {
+		$this->params = $params;
+		$this->payload = $payload;
+	}
 
 
 

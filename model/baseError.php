@@ -1,4 +1,5 @@
 <?php
+namespace jdchmiel\lessREST;
 
 class baseError extends base {
 	private $status;
@@ -24,7 +25,7 @@ class baseError extends base {
 		} else {
 			$outMessage = $message;
 		}
-		Header('HTTP/1.1 ' . $status . ' ' . $outMessage));
+		Header('HTTP/1.1 ' . $status . ' ' . $outMessage);
 		Header('Content-type: text/html');
 		echo($outMessage);
 		exit;
