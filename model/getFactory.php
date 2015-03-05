@@ -1,22 +1,17 @@
 <?php
 namespace jdchmiel\lessREST;
 class getFactory{
-	public static function build($type, $params, $payload) {
-		if (is_null($type) || $type === "" ||  is_null($params)) {
-			return new \jdchmiel\lessREST\baseError(400, 'Missing Params:<br> type:' . $type . '<br> params: ' . var_export($params, true));
-		}
-		$type = "jdchmiel\\lessREST\\get\\" . strtolower($type);
+	public static function build(&$router) {
+		$type = $router->config->PublishNamespace . "get\\" . strtolower($router->type);
 		try {
 			if (class_exists($type)) {
-				$creatorObj = new $type($params, $payload);
+				$creatorObj = new $type($router);
 			} else {
-				$creatorObj = new baseError('400','Invalid endpoint');
+				$creatorObj = new baseError('400','Invalid GET endpoint');
 			}
 		} catch (exception $e) {
-			$creatorObj = new baseError('400','Exception - Invalid endpoint');
+			$creatorObj = new baseError('400','Exception - Invalid GET endpoint');
 		}
 		return $creatorObj;
 	}
 }
-	
-

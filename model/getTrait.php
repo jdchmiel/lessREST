@@ -5,12 +5,10 @@ namespace jdchmiel\lessREST;
  **/
 
 trait getTrait {
-	protected $params;
-	protected $payload;
+	protected $router;
 	abstract public function process(); // depending on writing or reading, will call save or load
-	public function __construct($params, $payload) {
-		$this->params = $params;
-		$this->payload = $payload;
+	public function __construct(&$router) {
+		$this->router = $router;
 	}
 
 

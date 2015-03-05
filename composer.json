@@ -12,7 +12,8 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"jdchmiel\\lessREST\\" : "model/"
+			"jdchmiel\\lessREST\\" : "model/",
+			"sample\\" : "publish"
 		}
 	},
 	"autoload-dev" : {
