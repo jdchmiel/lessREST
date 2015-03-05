@@ -2,10 +2,7 @@
 namespace  jdchmiel\lessREST;
 class Config {
 
-	private $values = array(
-//		"Redis" => array(),
-//		"TTL" => 60,
-//		"Log" => array(),
+	protected $values = array(
 		"marco" => "polo",
 		"PublishNamespace" => "\\sample\\",
 	);
